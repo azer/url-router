@@ -10,7 +10,7 @@ $ go get github.com/azer/url-router
 
 ## Usage
 
-```golang
+```go
 routes = urlrouter.New("/users/:name", "/page/:page")
 
 match := routes.Match("/users/john?foo=bar&qux=corge")
@@ -26,3 +26,5 @@ match = routes.Match("nonexisting")
 match
 // => nil
 ```
+
+See `test/test.go` for more info.
