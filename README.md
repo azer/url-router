@@ -13,7 +13,7 @@ $ go get github.com/azer/url-router
 ```go
 routes = urlrouter.New("/users/:name", "/page/:page")
 
-match := routes.Match("/users/john?foo=bar&qux=corge")
+match := routes.Match("/users/john")
 
 match
 // => urlrouter.Match {
