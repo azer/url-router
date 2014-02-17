@@ -17,8 +17,8 @@ match := routes.Match("/users/john")
 
 match
 // => urlrouter.Match {
-//      params: { name: "john" }
-//      pattern: "/users/:name"
+//      Params: { name: "john" }
+//      Pattern: "/users/:name"
 //    }
 
 match = routes.Match("nonexisting")
