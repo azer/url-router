@@ -44,7 +44,10 @@ func PathToRegex (path string) (*regexp.Regexp, []string) {
 	}
 
 	str := fmt.Sprintf("^%s\\/?$", strings.Replace(path, "/", "\\/", -1))
+
 	str = pattern.ReplaceAllString(str, "([^\\/]+)")
+	str = strings.Replace(str, ".", "\\.", -1)
+
 	regex, _ := regexp.Compile(str)
 
 	return regex, keys
